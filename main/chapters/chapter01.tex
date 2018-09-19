@@ -2,6 +2,63 @@
 \section{Introductory Proofs}
 \begin{theorem}
 There is no rational number whose square is 2 \\
-\textit{Proof.} A rational number can be expressed as $ p/q $ where both $ p $ and $ q $ are integers. We can prove this using contradiction. If there does exist a rational number whose square is 2, then $$ \left(\dfrac{p}{q}\right)^2 = 2$$ We can rearrange this to find that \[ p^2 = 2 q^2 \]. Based on this, we know that $ p^2 $ is even. We must now show that since $ p^2 $ is even $ p $ must also be even. Here we can say that since $ p^2 = p * p $ and $ p^2 $ is divisible by 2, $ p $ must also be divisible by two, since $ p $ is an integer. We can now introduce another variable $ a $ to say $ 2a = p $ so \[ \dfrac{4a^2}{q^2} = 2 \] rearranging we find 
+\textit{Proof.} A rational number can be expressed as $ p/q $ where both $ p $ and $ q $ are integers. We can prove this using contradiction. If there does exist a rational number whose square is 2, then $$ \left(\dfrac{p}{q}\right)^2 = 2$$ We can rearrange this to find that \[ p^2 = 2 q^2 \] Based on this, we know that $ p^2 $ is even. We must now show that since $ p^2 $ is even $ p $ must also be even. Here we can say that since $ p^2 = p * p $ and $ p^2 $ is divisible by 2, $ p $ must also be divisible by two, since $ p $ is an integer. We can now introduce another variable $ a $ to say $ 2a = p $ so \[ \dfrac{4a^2}{q^2} = 2 \] rearranging we find 
 \[ \dfrac{q^2}{a^2} = 2 \] now using the previous argument we know that $ q $ is also even. This now tells us that $ p/q $ is further divisible and thus does not define a rational number.  
-\end{theorem} 																		 												
+\end{theorem} 																		 						
+\section{Some Preliminaries}
+The necessary vocabulary for Analysis comes from set theory. This section will just be a quick overview. \\
+\subsection{Sets}
+A \textit{set} is any collection of objects. These objects are referred to as \textit{elements} of the set. \\
+Given a set \textit{A}, we write $ x \in A $ if $ x $ is an element of $ A $. If $ x $ is not an element of $ A $, then we write $ x \notin A $. Given two sets $ A $ and $ B $, the \textit{union} is written $ A \cup B $ and is defined by asserting that. 
+\begin{center} 
+	$ x \in A \cup B $ provided that $ x \in A $ or $ x \in B $. 
+\end{center}
+The \textit{intersection} $ A \cap B $ is the set defined by the rule. 
+\[ x \in A \cap B \text{ provided } x \in A \text{ and } x \in B \]
+\begin{example}
+	Let
+	\begin{align*}
+		A_1 &= N = {1,2,3,...}, \\
+		A_2 &= {2,3,4,...}, \\
+		A_3 &= {3,4,5,...},
+	\end{align*}
+	and, in general, for each $ n \in N $, define the set
+	\[ A_n = {n, n+1, n+2, ...}. \]
+	The result is a nested chain of sets
+	\[ A_1 \supseteq A_2 \supseteq A_3 \supseteq ... , \]
+	where each successive set is a subset of all the previous ones. Notationally, 
+	\[ \bigcup^\infty_{n=1} A_n = A_1. \]
+\end{example}
+Given $ A \subseteq \textbf{R} $ the compliment of $ A $, written $ A^c $, refers to the set of all elements of \textbf{R} not in $ A $. Thus, for $ A \subseteq \textbf{R} $, 
+\[ A^c = {x \in \textbf{R} : x \notin A}. \] \\
+Here are some notation for sets:
+\[ \textbf{N} = \{1,2,3,...\} \]
+In words this set is the collection of all natural numbers. 
+\subsection{Functions}
+Given two sets $ A $ and $ B $ a function from $ A $ to $ B $ is a rule or mapping that takes each element $ x \in A $  and associates with it a single element of $ B $. 
+\begin{example}
+	\[ g(x) = 
+		\begin{cases}
+			1 \mbox{ if } x \in \textbf{Q} \\
+			0 \mbox{ if } x \notin \textbf{Q}
+		\end{cases} 
+	\]
+	The domain of $ g $ is all of $ \textbf{R} $ but the range is only 0 or 1. There is no single formula for this function, but it does qualify as a function.
+\end{example}
+\begin{example}[Triangle Inequality]
+	The absolute value function is also a function, and has been given its own symbol. 
+	\[ 
+	|x| =
+		\begin{cases}
+			x \mbox{ if } x \geq 0 \\
+			-x \mbox{ if } x < 0
+		\end{cases}
+	 \]
+\end{example}
+\subsection{Logic and Proofs}
+Using an indirect proof when a direct proof is available is not the wave. 
+\begin{theorem}
+	Two real numbers $ a $ and $ b $ are equal if and only if for every real number $ \epsilon > 0$ if follows that $ |a-b| < \epsilon $ \\
+	\textit{Proof.} Two important parts of this theorem. "if and only if" in math means that the statement must be true in both directions. In the forward it is quite easy to see: if $ a = b $ then $ |a-b| $ is indeed less than all real numbers. \\
+	Now to prove the converse statement. We can use a proof by contradiction. We arrive at this approach because of the "for every" in the theorem which suggests that we only need to show one example where this does not work. 
+\end{theorem}
