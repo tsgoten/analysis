@@ -1,6 +1,0 @@
-\contentsline {chapter}{\numberline {1}The Real Numbers}{2}
-\contentsline {section}{\numberline {1.1}Introductory Proofs}{2}
-\contentsline {section}{\numberline {1.2}Some Preliminaries}{2}
-\contentsline {subsection}{\numberline {1.2.1}Sets}{2}
-\contentsline {subsection}{\numberline {1.2.2}Functions}{3}
-\contentsline {subsection}{\numberline {1.2.3}Logic and Proofs}{3}
