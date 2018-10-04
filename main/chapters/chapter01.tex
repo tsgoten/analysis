@@ -61,5 +61,55 @@ Using an indirect proof when a direct proof is available is not the wave.
 \begin{theorem}
 	Two real numbers $ a $ and $ b $ are equal if and only if for every real number $ \epsilon > 0$ if follows that $ |a-b| < \epsilon $ \\
 	\textit{Proof.} Two important parts of this theorem. "if and only if" in math means that the statement must be true in both directions. In the forward it is quite easy to see: if $ a = b $ then $ |a-b| $ is indeed less than all real numbers. \\
-	Now to prove the converse statement. We can use a proof by contradiction. We arrive at this approach because of the "for every" in the theorem which suggests that we only need to show one example where this does not work. 
+	Now to prove the converse statement. We can use a proof by contradiction. We arrive at this approach because of the "for every" in the theorem which suggests that we only need to show one example where this does not work. \\
+	The choice of
+	\[ \epsilon_0 = |a-b| > 0 \]
+	contradicts our previous statement so 
+	\begin{gather}
+		|a-b| < \epsilon_0 \mbox{ and } |a-b|= \epsilon_0
+	\end{gather}
+	cannot both be true. This contradiction means that the initial assumption \[ a \neq b \] does not hold. 
 \end{theorem}
+\subsection{Induction}
+The main principle behind induction is that if $ S $ is some subset of $ \textbf{N} $ with the property that
+\begin{enumerate}
+	\item $ S $ contains 1 and
+	\item whenever $ S $ contains a natural number $ n $, it also contains $ n + 1 $,
+\end{enumerate}
+then it must be that $ S = \textbf{N} $. 
+\begin{example}
+	Let $ x_1 = 1 $, and for each $ n \in \textbf{N} $ define \[ x_{n+1} = (1/2)x_n + 1 \]
+	Using this rule we can compute the series $ 3/2, 7/4, ... $. Lets use induction to prove 
+	\[ x_n \leq x_{n+1} \] 
+	for all values of $ n \in \textbf{N} $. \\
+	if we have $ x_n \leq x_{n+1} $, then it follows that $ x_{n+1} \leq x_{n+2} $. \\
+	Multiplying by $ 1/2 $ and adding one gives us 
+	\[ \dfrac{1}{2} x_n + 1 \leq \dfrac{1}{2} x_{n+1} + 1, \]
+	which substituting from the given statements gives us $ x_{n+1} \leq x_{n+2} $, and we can continue this for all following values. By induction this is proved for all $ x \in \textbf{N} $. 
+\end{example}
+\section{The Axiom of Completeness}
+\textbf{Axiom of Completeness. }\textit{Every nonempty set of real numbers that is bounded above has a least upper bound.} \\
+A real number $ s $ is the \textbf{supremum}, least upper bound, for a set $ A \subseteq \textbf{R} $ if it meets the following two criteria
+\begin{enumerate}
+	\item $ s $ is an upper bound for $ A $;
+	\item if $ b $ is any upper bound for $ A $, then $ s \leq b $.
+\end{enumerate}
+Use notation $ s = \sup A $ for least upper bound. \\
+Similarly, there is the greatest lower bound called \textbf{infimum}. \\
+A maximum or minimum follows the usual definition, but it must be in the set.
+% add the Lemma extending part two for the supremum
+\subsection{Nested Interval Property}
+\begin{theorem}
+	For each $ n \in \textbf{N} $, assume we are given a closed interval $ I_n = [a_n, b_n] = {x \in \textbf{R}: a_n \leq x \leq b_n}$. Assume also that each $ I_n $ contains $ I_{n+1} $. Then, the resulting nested sequence of closed intervals
+	\[ I_1 \subseteq I_2 \subseteq I_3 \subseteq ... \]
+	has a nonempty intersection; that is, $ \cap_{n =1}^\infty I_n \neq \emptyset$.
+	Define a new set $ A = {a_n : n \in \textbf{N}} $ set $ x = \sup A $ so $ x > a_n $ but since it is the least upper bound $ x \leq b_n $. So, \[ a_n \leq x \leq b_n \]
+\end{theorem}
+
+
+
+
+ 
+
+
+
