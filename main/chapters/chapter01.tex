@@ -105,8 +105,19 @@ A maximum or minimum follows the usual definition, but it must be in the set.
 	has a nonempty intersection; that is, $ \cap_{n =1}^\infty I_n \neq \emptyset$.
 	Define a new set $ A = {a_n : n \in \textbf{N}} $ set $ x = \sup A $ so $ x > a_n $ but since it is the least upper bound $ x \leq b_n $. So, \[ a_n \leq x \leq b_n \]
 \end{theorem}
-
-
+\subsection{Density of $ \Q $ in $ \R $}
+\begin{theorem}[Archimedean Property]
+	The theorem follows
+	\begin{enumerate}
+		\item Given any number $ x \in \R$, there exists an $ n \in \N $ satisfying $ n > x $. 
+		\item Given any real number $ y > 0 $, there exists an $ n \in \N $ satisfying $ 1/n < y $.
+	\end{enumerate}
+	For the first part lets use an indirect proof, and say that $ \N $ is bounded, therefore it must have $ \alpha = \sup N $. Now if we have the value $ \alpha - 1 $, this is no longer the upper bound so we have $ \alpha -1 < n $ where $ n \in \N $. We then have $ \alpha < n + 1 $, but $ n+1 \in \N $, therefore no supremum exists. 
+\end{theorem}
+\begin{theorem}[Density of $ \Q $ in $ \R $]
+	For every real numbers $ a $ and $ b $ with $ a < b $, there exists a rational number $ r $ satisfying $ a < r < b $. \\
+	\textit{Proof.} To simplify, let's assume $ 0 \leq a < b $, you can revisit the assumption easily. A rational number can be expressed as follows for $ m, n \in \N $ so that \[ a < \dfrac{m}{n} < b\]. Using the previous theorem we pick $ n \in \N $ so that \[ \dfrac{1}{n} < b -a \]. Multiplying the first inequality gives us \[ an < m < bn \]. Now we must pick $ m $ such that \[ m -1 \leq na < m \]. this immediately yields the first half \[ a < \dfrac{m}{n} \]. Using the 
+\end{theorem}
 
 
  
