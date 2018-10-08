@@ -116,11 +116,49 @@ A maximum or minimum follows the usual definition, but it must be in the set.
 \end{theorem}
 \begin{theorem}[Density of $ \Q $ in $ \R $]
 	For every real numbers $ a $ and $ b $ with $ a < b $, there exists a rational number $ r $ satisfying $ a < r < b $. \\
-	\textit{Proof.} To simplify, let's assume $ 0 \leq a < b $, you can revisit the assumption easily. A rational number can be expressed as follows for $ m, n \in \N $ so that \[ a < \dfrac{m}{n} < b\]. Using the previous theorem we pick $ n \in \N $ so that \[ \dfrac{1}{n} < b -a \]. Multiplying the first inequality gives us \[ an < m < bn \]. Now we must pick $ m $ such that \[ m -1 \leq na < m \]. this immediately yields the first half \[ a < \dfrac{m}{n} \]. Using the 
+	\textit{Proof.} To simplify, let's assume $ 0 \leq a < b $, you can revisit the assumption easily. A rational number can be expressed as follows for $ m, n \in \N $ so that \[ a < \dfrac{m}{n} < b\] Using the previous theorem we pick $ n \in \N $ so that \[ \dfrac{1}{n} < b -a \] Multiplying the first inequality gives us \[ an < m < bn \] Now we must pick $ m $ such that \[ m -1 \leq na < m \] this immediately yields the first half \[ a < \dfrac{m}{n} \] Using the previous result \[ b > a + \dfrac{1}{n} \] we can write 
+	\[ m \leq na + 1 \]
+	\[ m < n \left(b - \dfrac{1}{n}\right) + 1 \]
+	\[ m = nb \] and then we arrive at the desired 
+	\[ a < m/n <b \]
+\end{theorem}
+\subsection{The Existence of Square Roots}
+\begin{theorem}
+	There exists a real number $ \alpha \in \R $ satisfying $ \alpha^2 = 2 $
+	\textit{Proof.} Consider the set 
+	\[ T = {t \in \R : t^2 < 2} \]
+	and set $ \alpha = \sup T $. We can prove that $ \alpha^2  = 2$ by ruling out the possibilities $ \alpha^2 < 2 $ and $ \alpha^2 > 2 $. Since, $ \alpha $ is the supremum, $ \alpha^2 < 2 $ we need to show violates that it is an upper bound, and $ \alpha^2 > 2 $ violates that it is the least upper bound. \\
+	First lets rule out $ \alpha ^2 < 2 $, we need to show that there is a $ t $ that larger than $ \alpha $, so consider \\
+	\begin{align*}
+		\left(\alpha + \dfrac{1}{n}\right)^2 &= \alpha^2 + \dfrac{2 \alpha}{n} + \dfrac{1}{n^2} 
+		\intertext{Keep in mind that $ n \in \N $}
+		 \alpha^2 + \dfrac{2 \alpha}{n} + \dfrac{1}{n^2}  < \alpha^2 + \dfrac{2 \alpha}{n} + \dfrac{1}{n} \\
+		 = \alpha^2 + \dfrac{2 \alpha + 1}{n}
+	\end{align*}
+	Okay, so up until now we haven't actually used our assumption that $ \alpha^2 < 2 $. Due to this assumption we know the value $ 2 - \alpha ^2 > 0 $, so for a $ n_0 \in \N $ we can find
+	\[ \dfrac{1}{n_0} < \dfrac{2 - \alpha ^2}{2 \alpha + 1} \] 
+	This implies $ (2 \alpha + 1)/n_0 < 2 - \alpha ^2 $. Since, it is greater than the value already present we can make the substitution in the expression and maintain the inequality. 
+	\[ \left(\alpha + \dfrac{1}{n_0}\right)^2 < \alpha^2 + (2- \alpha^2) = 2\]
+	We arrive at a contradiction, because a value is greater than $ \alpha $ which is the upper bound $ \alpha^2 < 2 $ cannot happen. \\
+	Now lets assume that $ \alpha ^2 > 2 $. This time we use 
+	\[ \left(\alpha - \dfrac{1}{n}\right)^2 = \alpha^2 - \dfrac{2\alpha}{n} + \dfrac{1}{n^2} \]
+	\[ > \alpha^2 - \dfrac{2\alpha}{n} \]
+	Now we can use our assumption, $ \alpha ^2 > 2 $, to find a $ n_0 \in \N $ such that 
+	\[ \dfrac{1}{n_0} < \dfrac{\alpha^2 -2}{2 \alpha} \]
+	\[ \dfrac{2 \alpha}{n_0} < \alpha^2 - 2 \]
+	\[ -\dfrac{2 \alpha}{n_0} > 2 - \alpha^2 \]
+	Now we can make the substitution and get 
+	\[ \left(\alpha - \dfrac{1}{n}\right)^2 > \alpha^2 + 2 - \alpha^2 = 2  \]
+	Now that we have ruled out $ > 2 $ and $ < 2 $ we know that $ \alpha^2 = 2 $.
 \end{theorem}
 
+\section{Countable and Uncountable Sets}
+\subsection{Cardinality}
+The term  refers to the size of a set. 
+\indent Two sets $ A $ and $ B $ have the same cardinality if there exists $ f: A \rightarrow B $ that is $ 1-1 $ and onto. In this case, we write $ A \sim B $\\
 
- 
-
-
-
+\begin{example}
+	If we let $ E = {2,4,6,...} $ bet the set of even natural numbers, then we can show $ \N \sim E $. Let $ f: \N \rightarrow E $ be given by $ f(n) = 2n $. It is true that $ E $ is a subset of $ \N $, but this does not mean that $ E $ is "smaller" than $ \N $. This is a bias based on an exposure to finite sets, The definition of cardinality is quite specific, and from this point of view $ E \sim \N $.
+\end{example}
+\subsection{Countable Sets}
+A set $ A $ is countable if $ \N \sim A $. An infinite set that is not countable is called uncountable. 
