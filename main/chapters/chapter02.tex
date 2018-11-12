@@ -1,0 +1,34 @@
+\chapter{Sequences and Series}
+This section is a little different from the previous one. There are no notes per say, but problems and BBR for those problems.
+\section{Limit of a Sequence}
+\begin{definition}
+	A sequence is a function whose domain is \N
+\end{definition}
+\begin{definition} [Convergence]
+	What is the defintion of the convergence? \\
+	\indent \textit{A series $ (a_n) $ is said to converge to real number $ a $ if, for every positive number $ \e $, there exists an $ N \in \N $ such that whenever $ n\geq N $ it follows that $ |a_n - a| < \e $}  
+\end{definition}
+\putpic{conv}
+\begin{definition}
+	Consider a set 
+	\[ V _ { \epsilon } ( a ) = \{ x \in \mathbf { R } : | x - a | < \epsilon \} \]
+	which is the numbers in the $ e-neighborhood $ of $ a $. \\
+	Another way to state a sequence $ (a_n) $ converges to $ a $ if there exists a point in the sequence after which all the terms are within $ V_\e (a) $. 
+\end{definition}
+\begin{example}
+	Show
+	\[ \lim \left(\dfrac{1}{\sqrt{n}}\right) = 0\]
+	\begin{gather*}
+	a_n - a < \e \\
+	a_n - 0 = a_n < \e \\
+	\intertext{If we select $ N $ such that}
+	\dfrac{1}{\sqrt{N}} < \e \\
+	N > \dfrac{1}{e^2} \\
+	\intertext{We can logically proceed with the requirement $ n \geq N $}
+	n > \dfrac{1}{\e^2} 
+	\intertext{Which leaves us with}
+	\quad \frac { 1 } { \sqrt { n } } < \epsilon \quad \text { and hence } \quad \left| a _ { n } - 0 \right| < \epsilon
+	\end{gather*}
+	\textit{Remarks.} This might not seem that impressive or even complete, but consider if we wanted to somehow show that \[ \lim(n) = 0 \] you can see that we cannot make a similar argument. \\
+	Also note why we chose $ N > \dfrac{1}{\e ^2} $ this was a very specific choice because it allows us to make the logical substitution for $ n \geq N$ and we could manipulate it to return to the original function and find the statement we were looking for. 
+\end{example}
