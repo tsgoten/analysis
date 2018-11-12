@@ -1,0 +1,72 @@
+\documentclass[10pt, twocolumn]{article}
+\author{Tarang Srivastava}
+\usepackage{amsmath, amsthm}
+\usepackage{graphicx}
+\usepackage[margin=.25in]{geometry}
+\setlength{\columnsep}{.5in}
+\newcommand{\makechaptertitle}[1]{
+\begin{center}
+	\begin{large}
+		#1
+	\end{large}
+	\begin{small}
+		\\by Tarang Srivastava
+	\end{small}
+\end{center}
+}
+\theoremstyle{definition}
+\newtheorem{q}{}
+\begin{document}
+		\makechaptertitle{Analysis Chapter 2 Test}
+		\begin{q}
+			State the definition for convergence of a sequence
+		\end{q}
+		\begin{q}
+			Consider the sequence $ \left(a_n\right) $, where $ a_n = 1/\sqrt{n} $. \\
+			Show that the limit of the sequence is
+			\[ \lim \left(\dfrac{1}{\sqrt{n}}\right) = 0\]
+		\end{q}
+		\begin{q}
+			Show
+			\[ \lim \left( \frac { n + 1 } { n } \right) = 1 \]
+		\end{q}
+		\begin{q}
+			Prove the Algebraic Limit Theorem. Let $ \lim a_n = a, $ and $ \lim b_n = b $. Then,
+			\[ \begin{array} { l } { \text { (i) } \lim \left( c a _ { n } \right) = c a , \text { for all } c \in \mathbf { R } } \\ { \text { (ii) } \lim \left( a _ { n } + b _ { n } \right) = a + b } \\ { \text { (iii) } \lim \left( a _ { n } b _ { n } \right) = a b } \\ { \text { (iv) } \lim \left( a _ { n } / b _ { n } \right) = a / b , \text { provided } b \neq 0 } \end{array} \]
+		\end{q}
+		\begin{q}
+			(Cesaro Means) Show that if $ (x_n) $ is a convergent sequence, then the sequence given by the averages
+			\[ y _ { n } = \frac { x _ { 1 } + x _ { 2 } + \cdots + x _ { n } } { n } \]
+			also converges to the same limit. \\
+			Give an example to show that it is possible for the sequence $ (y_n) $ of averages
+			to converge even if $ (x_n) $ does not.
+		\end{q}
+		\begin{q}
+			Prove the Monotone Convergence Theorem.\\
+			\textit{If a sequence if monotone and bounded, then it converges.}
+		\end{q}
+		\begin{q}
+			Prove that 
+			\[ \sum _ { n = 1 } ^ { \infty } \frac { 1 } { n ^ { 2 } } \]
+			converges
+		\end{q}
+		\begin{q}
+			Prove the Harmonic Series does not converge
+			\[ \sum _ { n = 1 } ^ { \infty } \frac { 1 } { n } \]
+		\end{q}
+		\begin{q}
+			For the sequence 
+			\[ \left( a _ { n } \right) = \left( 1 , \frac { 1 } { 2 } , \frac { 1 } { 3 } , \frac { 1 } { 4 } , \frac { 1 } { 5 } , \frac { 1 } { 6 } , \cdots \right) \]
+			state two subsequences, and two non-obvious examples of invalid subsequences. 
+		\end{q}
+		\begin{q}
+			Prove \\
+			\textit{Subsequences of a convergent sequence converge to the same
+				limit as the original sequence.}
+		\end{q}
+		\begin{q}
+			Prove the Bolzano-Weierstrass Theorem.
+			\textit{Every bounded sequence contains a convergent subsequence.}
+		\end{q}
+
+\end{document}
