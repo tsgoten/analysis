@@ -11,13 +11,20 @@
 \author{Tarang Srivastava}
 \title{A Concise Review of Real Analysis }
 \pagecolor{black}
-\color{white}
+\color{lightgray}
+\graphicspath{{graphics/}}
+\newcommand{\putpic}[1]{
+	\includegraphics[width=\columnwidth]{#1}
+}
 %Theorems
 \theoremstyle{definition}
 \newtheorem{example}{Example}[section]
 \newtheorem{exercise}{}
+\theoremstyle{definition}
+\newtheorem{q}{}
 %\theoremstyle{theorem}
 \newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
 %Shortcuts for Sets
 \newcommand{\Q}{
 	\textbf{Q}
@@ -28,6 +35,8 @@
 \newcommand{\R}{
 	\textbf{R}
 }
+\newcommand{\e}{\epsilon}
+\newcommand{\myiff}{\textit{if and only if}}
 \begin{document}
     \begin{titlepage}
         \begin{center}

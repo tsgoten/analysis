@@ -88,7 +88,11 @@ then it must be that $ S = \textbf{N} $.
 	which substituting from the given statements gives us $ x_{n+1} \leq x_{n+2} $, and we can continue this for all following values. By induction this is proved for all $ x \in \textbf{N} $. 
 \end{example}
 \section{The Axiom of Completeness}
+\subsection{An Initial Defintion for \R}
+First, \R is a set containing \Q. The operations of addition and multiplication on \Q extend to all of \R. We assume that \R is an \textit{ordered field}, which contains \Q as a subfield. \\
+The most distinctive assumption about the real number system is that \R does not contain gaps. \\
 \textbf{Axiom of Completeness. }\textit{Every nonempty set of real numbers that is bounded above has a least upper bound.} \\
+\subsection{Least Upper Bounds and Greatest Lower Bounds}
 A real number $ s $ is the \textbf{supremum}, least upper bound, for a set $ A \subseteq \textbf{R} $ if it meets the following two criteria
 \begin{enumerate}
 	\item $ s $ is an upper bound for $ A $;
@@ -96,8 +100,23 @@ A real number $ s $ is the \textbf{supremum}, least upper bound, for a set $ A \
 \end{enumerate}
 Use notation $ s = \sup A $ for least upper bound. \\
 Similarly, there is the greatest lower bound called \textbf{infimum}. \\
-A maximum or minimum follows the usual definition, but it must be in the set.
-% add the Lemma extending part two for the supremum
+A maximum or minimum follows the usual definition, but it must be in the set. Thus, supremum and infimum are different ideas. \\
+Although a set can have a host of upper bounds, it can have only one least upper bound. \\
+\putpic{sup}
+\begin{example}
+	Let
+	\[ A = \left\{ \frac { 1 } { n } : n \in N \right\} = \left\{ 1 , \frac { 1 } { 2 } , \frac { 1 } { 3 } , \ldots \right\} \]
+	The set $ A $ is bounded above and below. Successful candidates for an upper bound include $ 3, 2, 3/2 $. For the least upper bound, we claim $ \sup A = 1 $. To argue this rigorously, we need to verify that properties (i) and (ii) hold. For (i), we just observe that $ 1 \geq 1/n $ for all choices of $ n \in \N $.\\
+	To verify (ii), we begin by assuming we are in possession of some other upper bound $ b $. Because $ 1 \in A $ and $ b $ is an upper bound for $ A $, we must have $ 1 \leq b $. This is precisely what property (ii) asks us to show. \\
+	Although we do not quite have the tools we need for a rigorous proof, it should be somewhat apparent that $\inf A = 0 $. \\
+	An important lesson is that $ \sup A $ and $ \inf A $ may or may not be elements of the set $ A $. This issue is tied to understanding the	crucial difference between the maximum and the supremum (or the minimum
+	and the infimum) of a given set.
+\end{example}
+\begin{lemma}
+	Assume $ s \in \R $ is an upper bound for a set $ A \subseteq \R $. Then, $ s = \sup A $ \myiff, for every choice of $ \epsilon > 0 $, there exists an element $ a \in A $ satisfying $ s-\e < a $
+\end{lemma}
+\section{Consequence of Completeness}
+The first application of the AoC is to mathematically express that the real line contain no gaps.
 \subsection{Nested Interval Property}
 \begin{theorem}
 	For each $ n \in \textbf{N} $, assume we are given a closed interval $ I_n = [a_n, b_n] = {x \in \textbf{R}: a_n \leq x \leq b_n}$. Assume also that each $ I_n $ contains $ I_{n+1} $. Then, the resulting nested sequence of closed intervals
@@ -162,3 +181,72 @@ The term  refers to the size of a set.
 \end{example}
 \subsection{Countable Sets}
 A set $ A $ is countable if $ \N \sim A $. An infinite set that is not countable is called uncountable. 
+\begin{theorem}
+	(i)The set \Q is countable. (ii) The set \R is countable. 
+\end{theorem}
+\section{Cantor's Theorem}
+\begin{theorem}
+	The open interval \[ ( 0,1 ) = \{ x \in \mathbf { R } : 0 < x < 1 \} \] is uncountable. \\
+	Proof by contradiction,  assume function $ f:\N \rightarrow (0,1) $ is 1-1 and onto. \\
+	Say that $ m, n \in \N $ is the digit from the set $ \{0,1,2,...,9\} $ \\
+	\putpic{coolproof}
+	Now say we want to define a number $ x \in (0,1) $ such that $ x = .b_1b_2b_3... $ using this rule
+	\[ b _ { n } = \left\{ \begin{array} { l l } { 2 } & { \text { if } a _ { n n } \neq 2 } \\ { 3 } & { \text { if } a _ { n n } = 2 } \end{array} \right. \]
+	Work through this and see how you will go through all of \N before finding the number. 
+\end{theorem}
+\section{Power Sets}
+Given a set $ A $, the power set $ P(A) $ refers to the collection of all subsets of $ A $. It
+is important to understand that$  P (A) $ is itself considered a set whose elements are the different possible subsets of $ A $.
+\begin{theorem}[Cantor's Theorem]
+	Given any set $ A $, there does not exist a function $ f:A \rightarrow P(A) $ that is onto. 
+\end{theorem}
+\section{Exercises}
+\begin{q}
+	Prove the $ \sqrt{2}$ is not rational.
+\end{q}
+\begin{q}
+	Prove that the product of two odd integers is also odd.
+\end{q}
+\begin{q}
+	Let $ A = \{ a , b , c \} $. List the elements of $ P(A) $.
+\end{q}
+\begin{q}
+	Use the Archimedeam Property of \textbf{R} to prove that
+	\[ \inf \{ 1 / n : n \in \mathbf { N } \} = 0 \]
+\end{q}
+\begin{q}
+	Show that the set of all finite subsets of \textbf{N} is countable set.
+\end{q}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

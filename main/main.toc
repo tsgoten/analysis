@@ -6,8 +6,15 @@
 \contentsline {subsection}{\numberline {1.2.3}Logic and Proofs}{3}
 \contentsline {subsection}{\numberline {1.2.4}Induction}{4}
 \contentsline {section}{\numberline {1.3}The Axiom of Completeness}{4}
-\contentsline {subsection}{\numberline {1.3.1}Nested Interval Property}{4}
-\contentsline {subsection}{\numberline {1.3.2}Density of $ \textbf {Q} $ in $ \textbf {R} $}{5}
-\contentsline {subsection}{\numberline {1.3.3}The Existence of Square Roots}{5}
-\contentsline {section}{\numberline {1.4}Countable and Uncountable Sets}{6}
-\contentsline {subsection}{\numberline {1.4.1}Cardinality}{6}
+\contentsline {subsection}{\numberline {1.3.1}An Initial Defintion for \textbf {R} }{4}
+\contentsline {subsection}{\numberline {1.3.2}Least Upper Bounds and Greatest Lower Bounds}{4}
+\contentsline {section}{\numberline {1.4}Consequence of Completeness}{5}
+\contentsline {subsection}{\numberline {1.4.1}Nested Interval Property}{5}
+\contentsline {subsection}{\numberline {1.4.2}Density of $ \textbf {Q} $ in $ \textbf {R} $}{5}
+\contentsline {subsection}{\numberline {1.4.3}The Existence of Square Roots}{6}
+\contentsline {section}{\numberline {1.5}Countable and Uncountable Sets}{7}
+\contentsline {subsection}{\numberline {1.5.1}Cardinality}{7}
+\contentsline {subsection}{\numberline {1.5.2}Countable Sets}{7}
+\contentsline {section}{\numberline {1.6}Cantor's Theorem}{7}
+\contentsline {section}{\numberline {1.7}Power Sets}{8}
+\contentsline {section}{\numberline {1.8}Exercises}{8}
